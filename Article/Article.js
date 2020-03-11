@@ -146,7 +146,7 @@ var articleArray = data.map(object => {
   return article
 });
 //adds the first article card to the HTML
-var div = document.querySelector('div.article');
+var div = document.querySelector('div.articles');
 div.appendChild(articleArray[0])
 
 // adds all articles to page

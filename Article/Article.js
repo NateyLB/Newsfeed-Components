@@ -133,10 +133,19 @@ var p3 = document.createElement('p');
   p3.textContent = data.thirdParagraph
   div.appendChild(p3);
   var span = document.createElement('span');
+  span.textContent = "Expand";
   span.classList.add("expandButton");
   div.appendChild(span);
-  span.addEventListener('toggle', (event) => {
-    span.classList.add("article-open");
+  span.addEventListener('click', (event) => {
+    if(div.classList.contains("article-open")){
+      div.classList.remove("article-open");
+      span.textContent = "Expand";
+    }
+    else{
+      div.classList.add("article-open");
+      span.textContent = "Collapse";
+      span.style.position = ""
+    }
   });
   return div
 }
@@ -147,9 +156,9 @@ var articleArray = data.map(object => {
 });
 //adds the first article card to the HTML
 var div = document.querySelector('div.articles');
-div.appendChild(articleArray[0])
+// div.appendChild(articleArray[0])
 
-// adds all articles to page
-// articleArray.forEach(element => {
-//   div.appendChild(element);
-// });
+//adds all articles to page
+articleArray.forEach(element => {
+  div.appendChild(element);
+});

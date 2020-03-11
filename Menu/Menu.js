@@ -46,10 +46,13 @@ const menu = document.createElement('div');
   menu.classList.add("menu");
   menu.appendChild(ul);
   menuButton.addEventListener('click', (event) => {
-    if(menu.classList.contains("menu--open") === true){
+    
+    if(menu.classList.contains("menu--open")){
       menu.classList.remove("menu--open");
     }
+    else{
     menu.classList.add("menu--open");
+    }
   });
   return menu
 }

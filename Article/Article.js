@@ -112,6 +112,7 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+//creates an article card
 function createArticle(data){
   var div = document.createElement('div');
   div.classList.add("article");
@@ -139,12 +140,16 @@ var p3 = document.createElement('p');
   });
   return div
 }
-
+//makes an array of article cards
 var articleArray = data.map(object => {
   let article = createArticle(object);
   return article
 });
+//adds the first article card to the HTML
 var div = document.querySelector('div.article');
-articleArray.forEach(element => {
-  div.appendChild(element);
-});
+div.appendChild(articleArray[0])
+
+// adds all articles to page
+// articleArray.forEach(element => {
+//   div.appendChild(element);
+// });

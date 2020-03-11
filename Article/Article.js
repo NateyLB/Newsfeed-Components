@@ -143,8 +143,7 @@ var p3 = document.createElement('p');
     }
     else{
       div.classList.add("article-open");
-      span.textContent = "Collapse";
-      span.style.position = ""
+      span.textContent = "Close";
     }
   });
   return div
